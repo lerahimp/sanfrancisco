@@ -1,0 +1,56 @@
+Acknowledgements:
+
+THE INTERNET
+https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.drop.html 
+    - used to learn how to drop columns in pandas
+
+https://towardsdatascience.com/k-means-clustering-algorithm-applications-evaluation-methods-and-drawbacks-aa03e644b48a/ 
+    - used to learn how to standardize data and apply K-Means clustering
+
+https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html
+    - used to get familiar with K-Means parameters (i.e., random state)
+
+https://medium.com/analytics-vidhya/implementation-of-principal-component-analysis-pca-in-k-means-clustering-b4bc0aa79cb6
+    - used to learn about PCA and why it would be helpful in my data mining task
+
+https://scikit-learn.org/stable/auto_examples/cluster/plot_kmeans_silhouette_analysis.html
+    - used to learn how to apply silhouette analysis
+
+https://en.wikipedia.org/wiki/Silhouette_(clustering)#:~:text=A%20clustering%20with%20an%20average,the%20distances%20become%20more%20similar.
+    - used to learn how to interpret silhouette scores
+
+
+ChatGPT 
+NOTE: It can be assumed that I gave my whole code and context of what I am trying to achieve to get more accurate feedback
+Prompt #1
+    - Input: “What is the ideal plot for the silhouette analysis for K-Means in matplotlib?”
+    - Output:
+        plt.figure(figsize=(8, 6))
+        plt.plot(range(2, 11), silhouette_scores, marker='o')
+        plt.title('Silhouette Method for Optimal k')
+        plt.xlabel('Number of Clusters (k)')
+        plt.ylabel('Silhouette Score')
+        plt.show()
+
+Prompt #2
+    - Input: “How do I compare the cluster values in K-Means clustering using sci-kit?”
+    - Output:
+        cluster_summary = df.groupby("Cluster").mean()
+        print(cluster_summary)
+
+Prompt #3
+    - Input: “How do I see the average number of vehicle-pedestrian collisions and vehicle-vehicle collisions in the clusters?”
+    - Output:
+        collision_types = df.groupby("Cluster")[["Vehicle_Pedestrian_Collision", "Vehicle_Vehicle_Collision"]].mean()
+        print(collision_types)
+
+Prompt #4
+    - Input: "Can you guide me through plotting the clusters from K-Means after applying PCA in a 2D scatter plot?"
+    - Output:
+        plt.figure(figsize=(8, 6))
+        plt.scatter(data[:, 0], data[:, 1], c=df["Cluster"], cmap="viridis", alpha=0.7)
+        plt.xlabel("PCA Component 1")
+        plt.ylabel("PCA Component 2")
+        plt.title("K-Means Clustering of Traffic Crashes")
+        plt.colorbar(label="Cluster")
+        plt.show()
