@@ -37,7 +37,7 @@ df["Cluster"] = kmeans.fit_predict(X_std)
 
 #compare cluster values
 cluster_summary = df.groupby("Cluster").mean()
-print(cluster_summary)
+print(cluster_summary.T)
 
 #calculate average number of each type of collision for each cluster
 collision_types = df.groupby("Cluster")[["Vehicle_Pedestrian_Collision", "Vehicle_Vehicle_Collision"]].mean()
