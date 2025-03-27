@@ -2,19 +2,19 @@
 
 Data Mining course project based on the data sets from https://data.sfgov.org/
 
-# The Aim:
+# The Aim
 
 - Find patterns among pedestrian-involved accidents versus vehicle-to-vehicle accidents based on weather, road conditions, time of day, and lighting.
 
-# Reasoning:
+# Reasoning
 
 - Be able to provide more specific recommendations to lessen traffic crashes with injuries based on whether it involves vehicle-vehicle or vehicle-pedestrian collisions.
 
-# Dataset Used:
+# Dataset Used
 
 - https://data.sfgov.org/Public-Safety/Traffic-Crashes-Resulting-in-Injury/ubvf-ztfx/about_data
 
-# Preprocessing:
+# Preprocessing
 
 Framework Used - KNIME
 
@@ -34,11 +34,7 @@ Framework Used - KNIME
 - Column Renamer: Rename columns for more consistency and readability
 - CSV Writer: Write new dataset into CSV
 
-# Data Mining Technique:
-
-K-Means Clustering Analysis w/ PCA
-
-# How to Replicate Setup:
+# How to Replicate Setup
 
 - Download dataset https://data.sfgov.org/Public-Safety/Traffic-Crashes-Resulting-in-Injury/ubvf-ztfx/about_data
 - Download .knfw (KNIME) file included in the repository
@@ -47,7 +43,7 @@ K-Means Clustering Analysis w/ PCA
 - In the terminal, run 'pip install pandas numpy matplotlib scikit-learn'
 - Run and execute cluster_analysis.py
 
-# Findings:
+# Findings
 
 - The highest silhouette score of 0.52 was achieved with 2 clusters. This score is not ideal, but reasonable. It suggests that there may be some overlap between the clusters and increased dimensionality of data.
 - Cluster 0 has an average accident time of about 844 minutes since midnight (2:04 pm), mostly occurred in clear weather, during the day, and on a weekday.
@@ -55,7 +51,7 @@ K-Means Clustering Analysis w/ PCA
 - Cluster 0 has a roughly equal split between vehicle-pedestrian and vehicle-vehicle collisions, with a little bit more vehicle-vehicle collisions.
 - Cluster 1 has a higher proportion of vehicle-pedestrian collisions.
 
-# Conclusions:
+# Conclusions
 
 - Since accidents in cluster 0 occur more in clear weather, this indicates that factors outside of weather and road conditions may be contributing to the accidents.
 - In cluster 1, there is a higher proportion of vehicle-pedestrian collisions, with a lot more crashes occurring during rainy and cloudy weather. This suggests that safety measures targeted towards pedestrians in poor weather need to be improved.
