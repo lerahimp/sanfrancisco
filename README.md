@@ -5,9 +5,6 @@ Data Mining course project based on the data sets from https://data.sfgov.org/
 # The Aim
 
 - Find patterns among pedestrian-involved accidents versus vehicle-to-vehicle accidents based on weather, road conditions, time of day, and lighting.
-
-# Reasoning
-
 - Be able to provide more specific recommendations to lessen traffic crashes with injuries based on whether it involves vehicle-vehicle or vehicle-pedestrian collisions.
 
 # Dataset Used
